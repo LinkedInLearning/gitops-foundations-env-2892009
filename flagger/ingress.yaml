@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: gitops-foundations
+  namespace: flagger-exercise
+  labels:
+    app: gitops-foundations
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: gitops-foundations.westus2.cloudapp.azure.com
+      http:
+        paths:
+          - backend:
+              serviceName: gitops-foundations-service
+              servicePort: 80

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-foundations
+  namespace: flagger-exercise
+  labels:
+    app: gitops-foundations
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gitops-foundations
+  template:
+    metadata:
+      labels:
+        app: gitops-foundations
+    spec:
+      containers:
+      - name: gitops-foundations
+        image: {dockerHubUsername}/gitops-foundations:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
