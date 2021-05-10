@@ -3,9 +3,8 @@ This is the repository for the LinkedIn Learning course `GitOps Foundations`. Th
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
-_See the readme file in the main branch for updated instructions and information._
 ## Instructions
-This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the working files that can be used with lessons pertaining to the tool and more information about the prerequisite technologies.
+This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
 
 ## Branches
 The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
