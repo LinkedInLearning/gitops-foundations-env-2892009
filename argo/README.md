@@ -1,7 +1,15 @@
-# GitOps Foundations
-This is the repository for the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
+# ArgoCD Demonstration
+This is the demonstration is part of the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
+
+As part of this demonstration we'll deploy a containerized application onto ArgoCd using a GitOps approach.
 
 ![course-name-alt-text][lil-thumbnail-url] 
+
+## Required Tools
+1.  Docker is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide] [docker-install].
+2.  k3d is used to manage and establish the underlying k3s kubernetes cluster that runs ArgoCD.  You can download and install k3d using their [getting started guide] [k3d-start].
+3.  
+4.  This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
 
 ## Instructions
 This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
@@ -21,4 +29,6 @@ Some branches will have a beginning and an end state. These are marked with the 
 
 [lil-course-url]: https://www.linkedin.com/learning/
 [lil-thumbnail-url]: http://
+[k3d-start]: https://k3d.io/#installation
+[docker-install]: https://docs.docker.com/engine/install/
 
