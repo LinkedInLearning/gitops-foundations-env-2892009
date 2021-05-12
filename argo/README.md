@@ -32,4 +32,4 @@ Some branches will have a beginning and an end state. These are marked with the 
 [k3d-start]: https://k3d.io/#installation
 [docker-install]: https://docs.docker.com/engine/install/
 [kube-site]: https://kubernetes.io/docs/tasks/tools/
-[arg-start]: https://argoproj.github.io/argo-cd/getting_started/
+[argo-start]: https://argoproj.github.io/argo-cd/getting_started/
