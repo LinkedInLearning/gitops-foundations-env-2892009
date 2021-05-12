@@ -1,15 +1,15 @@
 # ArgoCD Demonstration
-This is the demonstration is part of the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
+This directory contains the example materials used in the ArgoCd demonstration that is part of the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
 
-As part of this demonstration we'll deploy a containerized application onto ArgoCd using a GitOps approach.
+In this demonstration we deploy a containerized application onto ArgoCd using a GitOps approach.
 
 ![course-name-alt-text][lil-thumbnail-url] 
 
 ## Required Tools
 1.  **Docker** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide] [docker-install].
 2.  **k3d** is used to manage and establish the underlying k3s kubernetes cluster that runs ArgoCD.  You can download and install k3d using their [getting started guide] [k3d-start].
-3.  
-4.  This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
+3.  **kubectl** is a command line tool used to run commands against the Kubernetes cluster.  You can download and install kubectl by following the installation instructions on the [official site].[kube-site]
+4.  **ArgoCd** is the GitOps operator that runs in the cluster and applies the example manifests.  You can download and install ArgoCd by following the tools [getting started guide] [argo-start].
 
 ## Instructions
 This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
@@ -31,4 +31,5 @@ Some branches will have a beginning and an end state. These are marked with the 
 [lil-thumbnail-url]: http://
 [k3d-start]: https://k3d.io/#installation
 [docker-install]: https://docs.docker.com/engine/install/
-
+[kube-site]: https://kubernetes.io/docs/tasks/tools/
+[arg-start]: https://argoproj.github.io/argo-cd/getting_started/
