@@ -6,8 +6,8 @@ As part of this demonstration we'll deploy a containerized application onto Argo
 ![course-name-alt-text][lil-thumbnail-url] 
 
 ## Required Tools
-1.  Docker is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide] [docker-install].
-2.  k3d is used to manage and establish the underlying k3s kubernetes cluster that runs ArgoCD.  You can download and install k3d using their [getting started guide] [k3d-start].
+1.  **Docker** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide] [docker-install].
+2.  **k3d** is used to manage and establish the underlying k3s kubernetes cluster that runs ArgoCD.  You can download and install k3d using their [getting started guide] [k3d-start].
 3.  
 4.  This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
 
