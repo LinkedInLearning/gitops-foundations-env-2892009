@@ -12,7 +12,7 @@ In this demonstration we deploy a containerized application onto ArgoCd using a 
 4.  **ArgoCd** is the GitOps operator that runs in the cluster and applies the example manifests.  You can download and install ArgoCd by following the tools [getting started guide][argo-start].
 
 ## Instructions
-This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
+This folder contains the example files for the ArgoCD demonstrations, prior to  pertaining to the tool and more information about the prerequisite technologies.
 
 ## Branches
 The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
