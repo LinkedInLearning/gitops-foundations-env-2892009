@@ -6,9 +6,9 @@ In this demonstration we deploy a containerized application onto ArgoCd using a 
 ![course-name-alt-text][lil-thumbnail-url] 
 
 ## Required Tools
-1.  **Docker** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide] [docker-install].
+1.  **Docker** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
 2.  **k3d** is used to manage and establish the underlying k3s kubernetes cluster that runs ArgoCD.  You can download and install k3d using their [getting started guide] [k3d-start].
-3.  **kubectl** is a command line tool used to run commands against the Kubernetes cluster.  You can download and install kubectl by following the installation instructions on the [official site].[kube-site]
+3.  **kubectl** is a command line tool used to run commands against the Kubernetes cluster.  You can download and install kubectl by following the installation instructions on the [official site][kube-site].
 4.  **ArgoCd** is the GitOps operator that runs in the cluster and applies the example manifests.  You can download and install ArgoCd by following the tools [getting started guide] [argo-start].
 
 ## Instructions
