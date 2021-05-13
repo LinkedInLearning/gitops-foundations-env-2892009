@@ -12,7 +12,7 @@ Some branches will have a beginning and an end state. These are marked with the 
 
 ## Installing
 1. To use these exercise files, you must have the following accounts:
-	- **DockerHub** is used to store container images that will be used throughout the course to run specific examples.
+	- **DockerHub** is used to store container images that will be ran throughout the course in specific examples.  Create an account on the [DockerHub][docker-hub] website.
 2. To use these exercise files, you must have the following installed:
 	- **Docker** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
 4. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
@@ -23,4 +23,5 @@ Some branches will have a beginning and an end state. These are marked with the 
 
 [lil-course-url]: https://www.linkedin.com/learning/
 [lil-thumbnail-url]: http://
+[docker-hub]: https://hub.docker.com/
 
