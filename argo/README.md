@@ -3,8 +3,6 @@ This directory contains the example materials used in the ArgoCd demonstration t
 
 In this demonstration we deploy a containerized application onto ArgoCd using a GitOps approach.
 
-![course-name-alt-text][lil-thumbnail-url] 
-
 ## Required Tools
 1.  **Docker** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
 2.  **k3d** is used to manage and establish the underlying k3s kubernetes cluster that runs ArgoCD.  You can download and install k3d using their [getting started guide][k3d-start].
@@ -12,7 +10,7 @@ In this demonstration we deploy a containerized application onto ArgoCd using a 
 4.  **ArgoCd** is the GitOps operator that runs in the cluster and applies the example manifests.  You can download and install ArgoCd by following the tools [getting started guide][argo-start].
 
 ## Instructions
-This folder contains the example files for the ArgoCD demonstrations, prior to  pertaining to the tool and more information about the prerequisite technologies.
+This folder contains the example files for the ArgoCD demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you will must build and store the container images into DockerHub using the [setup.sh][sh-setup] script.
 
 ## Branches
 The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
@@ -33,3 +31,4 @@ Some branches will have a beginning and an end state. These are marked with the 
 [docker-install]: https://docs.docker.com/engine/install/
 [kube-site]: https://kubernetes.io/docs/tasks/tools/
 [argo-start]: https://argoproj.github.io/argo-cd/getting_started/
+[sh-setup]: https://github.com/LinkedInLearning/gitops-foundations-env-2892009/blob/main/setup.sh
