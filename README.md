@@ -6,10 +6,6 @@ This is the repository for the LinkedIn Learning course `GitOps Foundations`. Th
 ## Instructions
 This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
 
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
-
 ## Installing
 1. To use these exercise files, you must have the following accounts:
 	- **DockerHub** is used to store container images that will be ran throughout the course in specific examples.  Create an account on the [DockerHub][docker-hub] website.
