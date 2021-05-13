@@ -10,7 +10,7 @@ In this demonstration we deploy a containerized application onto ArgoCd using a 
 4.  **ArgoCd** is the GitOps operator that runs in the cluster and applies the example manifests.  You can download and install ArgoCd by following the tools [getting started guide][argo-start].
 
 ## Instructions
-This folder contains the example files for the ArgoCD demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you will must build and store the container images into DockerHub using the [setup.sh][sh-setup] script.
+This folder contains the example files for the ArgoCD demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you will must build and store the container images into DockerHub using these [instructions][setup-instructions].
 
 ## Branches
 The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
@@ -31,4 +31,4 @@ Some branches will have a beginning and an end state. These are marked with the 
 [docker-install]: https://docs.docker.com/engine/install/
 [kube-site]: https://kubernetes.io/docs/tasks/tools/
 [argo-start]: https://argoproj.github.io/argo-cd/getting_started/
-[sh-setup]: https://github.com/LinkedInLearning/gitops-foundations-env-2892009/blob/main/setup.sh
+[setup-instructions]: https://github.com/LinkedInLearning/gitops-foundations-env-2892009#installing
