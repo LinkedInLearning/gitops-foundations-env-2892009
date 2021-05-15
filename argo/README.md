@@ -21,8 +21,7 @@ The following commands are used in the demonstrations.  They are provided within
 
 2. Patch a Kubernetes Deployment
 ```
-kubectl patch deployment gitops-foundations --namespace argocd-exercise -p \
-'{"spec":{"template":{"spec":{"containers":[{"name":"gitops-foundations","image":"[Your DockerHub ID goes here]/gitops-foundations:1.0"}]}}}}'
+kubectl patch deployment gitops-foundations --namespace argocd-exercise -p '{"spec":{"template":{"spec":{"containers":[{"name":"gitops-foundations","image":"[Your DockerHub ID goes here]/gitops-foundations:1.0"}]}}}}'
 ```
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
