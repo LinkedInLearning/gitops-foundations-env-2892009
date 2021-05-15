@@ -12,7 +12,7 @@ In this demonstration we deploy a containerized application onto ArgoCd using a 
 ## Instructions
 This folder contains the example files for the ArgoCD demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you will must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
 
-##Commands
+## Commands
 The following commands are used in the demonstrations.  They are provided within the readme file so that you can copy and paste them while working through the course.
 
 1. Get Cluster Node IP with kubectl
