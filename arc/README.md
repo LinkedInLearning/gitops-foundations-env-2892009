@@ -11,14 +11,14 @@ In this demonstration we deploy a containerized application onto a local k3s Kub
 4.  **Azure CLI** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
 
 ## Instructions
-This folder contains the example files for the ArgoCD demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you will must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
+This folder contains the example files for the Azure Arc demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
 
 ## Commands
 The following commands are used in the demonstrations.  They are provided within the readme file so that you can copy and paste them while working through the course.
 
-1. Get Cluster Node IP with kubectl
+1. Create a new cluster with k3d
 
-```kubectl get nodes -o wide```
+```k3d cluster create arccluster```
 
 2. Patch a Kubernetes Deployment
 ```
