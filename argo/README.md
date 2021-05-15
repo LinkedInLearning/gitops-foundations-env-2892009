@@ -16,6 +16,7 @@ This folder contains the example files for the ArgoCD demonstration.  Prior to a
 The following commands are used in the demonstrations.  They are provided within the readme file so that you can copy and paste them while working through the course.
 
 1. Get Cluster Node IP with kubectl
+
 ```kubectl get nodes -o wide```
 
 2. Patch a Kubernetes Deployment
