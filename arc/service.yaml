@@ -1,12 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gitops-foundations
-  namespace: argocd-exercise
+  name: gitops-foundations-service
+  annotations:
+    service.beta.kubernetes.io/azure-dns-label-name: {dockerHubUsername}
+  namespace: arc-exercise
 spec:
   type: LoadBalancer
   selector:
     app: gitops-foundations 
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 8080
