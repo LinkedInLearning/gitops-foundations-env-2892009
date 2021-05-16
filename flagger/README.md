@@ -7,9 +7,9 @@ In this demonstration we use a canary deployment to progressively deliver a cont
 1.  **Terraform** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
 2.  **kubectl** is a command line tool used to run commands against the Kubernetes cluster.  You can download and install kubectl by following the installation instructions on the [official site][kube-site].
 3.  **Azure CLI** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
-4.  **Kubectl** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
-5.   **Flux** is a continuous deployment tool that can be used for management of workloads on a Kubernetes clusters using a GitOps approac.  You can download and install Flux by following the instructions in the getting [started guide][flux-start].
-6.   **Flagger** is a progressive delivery tool that can be used for advanced deployment procedures on Kubernetes clusters.  You can download and install Flagger by following the instructions in the [getting started guide][flagger-start].
+4.   **Flux** is a continuous deployment tool that can be used for management of workloads on a Kubernetes clusters using a GitOps approac.  You can download and install Flux by following the instructions in the getting [started guide][flux-start].
+5.  **Helm** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
+5.   **Flagger** is a progressive delivery tool that can be used for advanced deployment procedures on Kubernetes clusters.  You can download and install Flagger by following the instructions in the [getting started guide][flagger-start].
 
 ## Instructions
 This folder contains the example files for the Azure Arc demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
