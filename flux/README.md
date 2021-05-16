@@ -16,15 +16,31 @@ This folder contains the example files for the Azure Arc demonstration.  Prior t
 ## Commands
 The following commands are used in the demonstrations.  They are provided within the readme file so that you can copy and paste them while working through the course.
 
-1. Login to Azure via the CLI
+1. Flux Installation Script
 
 ```
-az login
+curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 
-2. Create an Active Directory Service Account
+2. Bootstrap the Flux Config Repository
+
+For Personal Accounts:
 ```
-az ad sp create-for-rbac --skip-assignment
+flux bootstrap github \
+  --owner=$GITHUB_USER \
+  --repository=flux-config \
+  --branch=main \
+  --path=./clusters/cluster1 \
+  --personal
+```
+
+For Organizational Accounts:
+```
+flux bootstrap github \
+  --owner=Kevin-Bowersox-Courses \
+  --repository=flux-config \
+  --branch=main \
+  --path=./clusters/cluster1
 ```
 
 3.  Initiate the Terraform Workspace
