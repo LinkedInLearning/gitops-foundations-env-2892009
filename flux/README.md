@@ -45,9 +45,13 @@ flux bootstrap github \
 
 3. Create a Source to Point Flux to the Desired State
 ```
-flux create source git gitops-foundations --url=https://github.com/KevinBowersox-LinkedInLearning/gitops-foundations-release-prep.git --branch=main --interval=30s --export > ./clusters/cluster1/gitops-foundations-source.yaml
+flux create source git gitops-foundations --url=https://github.com/Kevin-Bowersox-Courses/gitops-foundations-env-2892009.git --branch=main --interval=30s --export > ./clusters/cluster1/gitops-foundations-source.yaml
 ```
 
+4.  Create a Kustomization to Deploy the Desired State Found in the Source
+```
+flux create kustomization gitops-foundations --source=gitops-foundations --path=./flux --prune=true --validation=client --interval=1m --export > ./clusters/cluster1/gitops-foundations-kustomization.yaml
+```
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
