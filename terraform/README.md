@@ -39,7 +39,8 @@ terraform apply
 
 5.  Connect the New Cluster to Kubectl (Must be ran in Terraform Directory)
 ```
-
+az aks get-credentials --resource-group $(terraform output -raw resource_group_name) --name $(terraform output -raw kubernetes_cluster_name)
+```
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
