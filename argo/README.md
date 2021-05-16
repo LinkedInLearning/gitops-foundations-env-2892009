@@ -17,7 +17,9 @@ The following commands are used in the demonstrations.  They are provided within
 
 1. Get Cluster Node IP with kubectl
 
-```kubectl get nodes -o wide```
+```
+kubectl get nodes -o wide
+```
 
 2. Patch a Kubernetes Deployment
 ```
