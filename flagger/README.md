@@ -14,7 +14,7 @@ In this demonstration we use a canary deployment to progressively deliver a cont
 ## Instructions
 This folder contains the example files for the Azure Arc demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
 
-Before we start these exercises, I’m going to assume that you have provisioned a new kubernetes cluster on Azure and that you have bootstrapped Flux in that cluster and its syncing with the flagger directory in the environment repository.
+Before starting the Flagger exercise, you must have provisioned a new kubernetes cluster on Azure and have bootstrapped Flux in the cluster.  Flux must be configured to sync to the [flagger directory in the environment repository].
 
 You should have the flux configuration repository cloned on your local workstation and Kubectl should be configured with your kubernetes cluster.
 
