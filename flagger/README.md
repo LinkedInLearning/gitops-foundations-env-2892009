@@ -1,15 +1,15 @@
-# Flagger Demonstration
+# Flux Demonstration
 This directory contains the example materials used in the Flagger demonstration that is part of the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
 
-
-In this demonstration we deploy a containerized application onto a local k3s Kubernetes cluster using the Flux operator within Azure Arc's GitOps support.
+In this demonstration we use a canary deployment to progressively deliver a containerized application onto an AKS Kubernetes cluster using Flagger.
 
 ## Required Tools
 1.  **Terraform** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
 2.  **kubectl** is a command line tool used to run commands against the Kubernetes cluster.  You can download and install kubectl by following the installation instructions on the [official site][kube-site].
 3.  **Azure CLI** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
-4.  **Flux** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
-5.  **Azure Account** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
+4.  **Kubectl** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
+5.   **Flux** is a continuous deployment tool that can be used for management of workloads on a Kubernetes clusters using a GitOps approac.  You can download and install Flux by following the instructions in the getting [started guide][flux-start].
+6.   **Flagger** is a progressive delivery tool that can be used for advanced deployment procedures on Kubernetes clusters.  You can download and install Flagger by following the instructions in the [getting started guide][flagger-start].
 
 ## Instructions
 This folder contains the example files for the Azure Arc demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
@@ -17,30 +17,46 @@ This folder contains the example files for the Azure Arc demonstration.  Prior t
 ## Commands
 The following commands are used in the demonstrations.  They are provided within the readme file so that you can copy and paste them while working through the course.
 
-1. Login to Azure via the CLI
+1. Flux Installation Script
 
 ```
-az login
+curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 
-2. Create an Active Directory Service Account
+2. Bootstrap the Flux Config Repository
+
+For Personal Accounts:
 ```
-az ad sp create-for-rbac --skip-assignment
+flux bootstrap github \
+  --owner=$GITHUB_USER \
+  --repository=flux-clusters-config \
+  --branch=main \
+  --path=./clusters/cluster1 \
+  --personal
 ```
 
-3.  Initiate the Terraform Workspace
+For Organizational Accounts:
 ```
-terraform init
+flux bootstrap github \
+  --owner=Kevin-Bowersox-Courses \
+  --repository=flux-clusters-config \
+  --branch=main \
+  --path=./clusters/cluster1
 ```
 
-4.  Apply the Terraform Plan
+3. Create a Source to Point Flux to the Desired State
 ```
-terraform apply
+flux create source git gitops-foundations --url=https://github.com/Kevin-Bowersox-Courses/gitops-foundations-env-2892009.git --branch=main --interval=30s --export > ./clusters/cluster1/gitops-foundations-source.yaml
 ```
 
-5.  Connect the New Cluster to Kubectl (Must be ran in Terraform Directory)
+4.  Create a Kustomization to Deploy the Desired State Found in the Source
 ```
-az aks get-credentials --resource-group $(terraform output -raw resource_group_name) --name $(terraform output -raw kubernetes_cluster_name)
+flux create kustomization gitops-foundations --source=gitops-foundations --path=./flux --prune=true --validation=client --interval=1m --export > ./clusters/cluster1/gitops-foundations-kustomization.yaml
+```
+
+5.  Watch the Kustomization
+```
+watch flux get kustomizations
 ```
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
@@ -52,3 +68,7 @@ az aks get-credentials --resource-group $(terraform output -raw resource_group_n
 [kube-site]: https://kubernetes.io/docs/tasks/tools/
 [azurecli-start]: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 [setup-instructions]: https://github.com/LinkedInLearning/gitops-foundations-env-2892009#installing
+[flux-start]: https://fluxcd.io/docs/get-started/
+[flagger-start]: https://docs.flagger.app/
+
+
