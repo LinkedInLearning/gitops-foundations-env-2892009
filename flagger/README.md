@@ -65,6 +65,10 @@ helm upgrade -i flagger flagger/flagger \
 --set meshProvider=nginx
 ```
 
+```
+http://kevinbowersoxteach.westus2.cloudapp.azure.com
+```
+
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
 [lil-course-url]: https://www.linkedin.com/learning/
