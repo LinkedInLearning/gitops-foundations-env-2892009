@@ -60,7 +60,7 @@ flux create source git gitops-foundations \
 4.  Create a Kustomization to Deploy the Desired State Found in the Source
 ```
 flux create kustomization gitops-foundations \
-  --source=gitops-foundations \ 
+  --source=gitops-foundations \
   --path=./flux \
   --prune=true \
   --validation=client \
