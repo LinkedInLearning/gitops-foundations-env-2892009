@@ -18,7 +18,9 @@ The following commands are used in the demonstrations.  They are provided within
 
 1. Create a new cluster with k3d
 
-```k3d cluster create arccluster```
+```
+k3d cluster create arccluster
+```
 
 2. Patch a Kubernetes Deployment
 ```
