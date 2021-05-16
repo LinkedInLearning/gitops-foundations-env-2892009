@@ -43,6 +43,11 @@ flux bootstrap github \
   --path=./clusters/cluster1
 ```
 
+3. Create a Source to Point Flux to the Desired State
+```
+flux create source git gitops-foundations --url=https://github.com/KevinBowersox-LinkedInLearning/gitops-foundations-release-prep.git --branch=main --interval=30s --export > ./clusters/cluster1/gitops-foundations-source.yaml
+```
+
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
