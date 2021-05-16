@@ -4,17 +4,17 @@ This directory contains the example materials used in the Flagger demonstration 
 In this demonstration we use a canary deployment to progressively deliver a containerized application onto an AKS Kubernetes cluster using Flagger.
 
 ## Required Tools
-1.  **Terraform** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
+1.  **Terraform** is used to provision the underlying Kubernetes cluster that runs the workloads of the example cloud native application.  You can download and install Terraform for your platform using the [official installation guide][terraform-install].
 2.  **kubectl** is a command line tool used to run commands against the Kubernetes cluster.  You can download and install kubectl by following the installation instructions on the [official site][kube-site].
 3.  **Azure CLI** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
-4.   **Flux** is a continuous deployment tool that can be used for management of workloads on a Kubernetes clusters using a GitOps approac.  You can download and install Flux by following the instructions in the getting [started guide][flux-start].
-5.  **Helm** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
+4.   **Flux** is a continuous deployment tool that uses a GitOps approach to manage operations of workloads on a Kubernetes clusters.  You can download and install Flux by following the instructions in the getting [started guide][flux-start].
+5.  **Helm** is a package manager for Kubernetes.  You can download and install the Helm by following the instructions on the [official website][helm-start].
 5.   **Flagger** is a progressive delivery tool that can be used for advanced deployment procedures on Kubernetes clusters.  You can download and install Flagger by following the instructions in the [getting started guide][flagger-start].
 
 ## Instructions
 This folder contains the example files for the Flagger demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
 
-Before starting the Flagger exercise, you must have provisioned a new kubernetes cluster on Azure with Terraform and have bootstrapped Flux in the cluster.  Flux must be configured to sync to the [flagger directory in the environment repository].  `kubectl` should also be configured with the AKS cluster.
+Before starting the Flagger exercise, you must have provisioned a new kubernetes cluster on Azure with Terraform and have bootstrapped Flux in the cluster.  Flux must be configured to sync to the flagger directory in this repository.  `kubectl` should also be configured with the AKS cluster.
 
 Both Flagger and NGINX are installed using helm charts, so before starting the exercise make sure Helm is installed.
 
@@ -69,5 +69,7 @@ http://kevinbowersoxteach.westus2.cloudapp.azure.com
 [setup-instructions]: https://github.com/LinkedInLearning/gitops-foundations-env-2892009#installing
 [flux-start]: https://fluxcd.io/docs/get-started/
 [flagger-start]: https://docs.flagger.app/
+[terraform-install]: https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started
+[helm-start]: https://helm.sh/docs/intro/install/
 
 
