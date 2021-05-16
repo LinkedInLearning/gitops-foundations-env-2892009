@@ -13,6 +13,11 @@ In this demonstration we deploy a containerized application onto an AKS Kubernet
 ## Instructions
 This folder contains the example files for the Azure Arc demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
 
+The application will be made available on Azure via a Loadbalancer that uses some built in integration with Azure to establish a DNS label.  The configuration of the service uses your DockerHub account name to establish the DNS label and it will vary based on the region you have deployed the workload.  It should look something like this:
+```
+kevinbowersoxteach.westus2.cloudapp.azure.com
+```
+
 ## Commands
 The following commands are used in the demonstrations.  They are provided within the readme file so that you can copy and paste them while working through the course.
 
