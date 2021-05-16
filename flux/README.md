@@ -53,6 +53,11 @@ flux create source git gitops-foundations --url=https://github.com/Kevin-Bowerso
 flux create kustomization gitops-foundations --source=gitops-foundations --path=./flux --prune=true --validation=client --interval=1m --export > ./clusters/cluster1/gitops-foundations-kustomization.yaml
 ```
 
+5.  Watch the Kustomization
+```
+watch flux get kustomizations
+```
+
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
 [lil-course-url]: https://www.linkedin.com/learning/
