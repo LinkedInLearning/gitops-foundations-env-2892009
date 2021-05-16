@@ -28,7 +28,7 @@ For Personal Accounts:
 ```
 flux bootstrap github \
   --owner=$GITHUB_USER \
-  --repository=flux-config \
+  --repository=flux-clusters-config \
   --branch=main \
   --path=./clusters/cluster1 \
   --personal
@@ -38,7 +38,7 @@ For Organizational Accounts:
 ```
 flux bootstrap github \
   --owner=Kevin-Bowersox-Courses \
-  --repository=flux-config \
+  --repository=flux-clusters-config \
   --branch=main \
   --path=./clusters/cluster1
 ```
