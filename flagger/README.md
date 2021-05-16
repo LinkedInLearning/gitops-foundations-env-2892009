@@ -89,7 +89,7 @@ watch kubectl get canaries --all-namespaces
 
 10.  Describe the Canary Deployment
 ```
-kubectl -n flagger-exercise decribe canary/gitops-foundations
+kubectl describe canary/gitops-foundations -n flagger-exercise
 ```
 
 
