@@ -1,4 +1,4 @@
-# Flux Demonstration
+# Flagger Demonstration
 This directory contains the example materials used in the Flagger demonstration that is part of the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 In this demonstration we use a canary deployment to progressively deliver a containerized application onto an AKS Kubernetes cluster using Flagger.
@@ -14,49 +14,55 @@ In this demonstration we use a canary deployment to progressively deliver a cont
 ## Instructions
 This folder contains the example files for the Azure Arc demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
 
+Before we start these exercises, I’m going to assume that you have provisioned a new kubernetes cluster on Azure and that you have bootstrapped Flux in that cluster and its syncing with the flagger directory in the environment repository.
+
+You should have the flux configuration repository cloned on your local workstation and Kubectl should be configured with your kubernetes cluster.
+
+Helm Website
+
+Both Flagger and NGINX are installed using helm charts, so we’ll start out by installing helm.  I’ve found the easiest way to install helm is through the scripts provided on the helm website.
+
+From Terminal
+
+I’ve already downloaded the script, so I just need to execute it to install helm. 
+
+./get_helm.sh  
+
+
 ## Commands
 The following commands are used in the demonstrations.  They are provided within the readme file so that you can copy and paste them while working through the course.
 
-1. Flux Installation Script
-
+1. Add the NGINX Controller Helm Repository
 ```
-curl -s https://fluxcd.io/install.sh | sudo bash
-```
-
-2. Bootstrap the Flux Config Repository
-
-For Personal Accounts:
-```
-flux bootstrap github \
-  --owner=$GITHUB_USER \
-  --repository=flux-clusters-config \
-  --branch=main \
-  --path=./clusters/cluster1 \
-  --personal
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 ```
 
-For Organizational Accounts:
+2. Create a Namespace for the NGINX Controller
 ```
-flux bootstrap github \
-  --owner=Kevin-Bowersox-Courses \
-  --repository=flux-clusters-config \
-  --branch=main \
-  --path=./clusters/cluster1
+kubectl create ns ingress-nginx
 ```
 
-3. Create a Source to Point Flux to the Desired State
+3. Install the Controller into the Namespace
 ```
-flux create source git gitops-foundations --url=https://github.com/Kevin-Bowersox-Courses/gitops-foundations-env-2892009.git --branch=main --interval=30s --export > ./clusters/cluster1/gitops-foundations-source.yaml
+helm upgrade -i ingress-nginx ingress-nginx/ingress-nginx \
+--namespace ingress-nginx \
+--set controller.metrics.enabled=true \
+--set controller.podAnnotations."prometheus\.io/scrape"=true \
+--set controller.podAnnotations."prometheus\.io/port"=10254
+
 ```
 
-4.  Create a Kustomization to Deploy the Desired State Found in the Source
+4.  Add the Flagger Helm Repository
 ```
-flux create kustomization gitops-foundations --source=gitops-foundations --path=./flux --prune=true --validation=client --interval=1m --export > ./clusters/cluster1/gitops-foundations-kustomization.yaml
+helm repo add flagger https://flagger.app
 ```
 
-5.  Watch the Kustomization
+5.  Install Flagger using the Helm Chart and Configure it with Prometheus 
 ```
-watch flux get kustomizations
+helm upgrade -i flagger flagger/flagger \
+--namespace ingress-nginx \
+--set prometheus.install=true \
+--set meshProvider=nginx
 ```
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
