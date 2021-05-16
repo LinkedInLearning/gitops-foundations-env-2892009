@@ -57,6 +57,41 @@ helm upgrade -i flagger flagger/flagger \
 ```
 http://kevinbowersoxteach.westus2.cloudapp.azure.com
 ```
+6.  Create the Source Definition
+```
+flux create source git gitops-foundations \
+  --url=https://github.com/Kevin-Bowersox-Courses/gitops-foundations-env-2892009.git \
+  --branch=main \
+  --interval=30s \
+  --export > ./clusters/cluster1/gitops-foundations-source.yaml
+```
+
+7.  Create the Kustomization
+```
+flux create kustomization gitops-foundations \
+  --source=gitops-foundations \
+  --path=./flagger \
+  --prune=true \
+  --validation=client \
+  --interval=1m \
+  --export > ./clusters/cluster1/gitops-foundations-kustomization.yaml
+```
+
+8.  Install the Loadbalancer
+```
+helm upgrade -i flagger-loadtester flagger/loadtester --namespace flagger-exercise
+```
+
+9.  Watch the Canaries
+```
+watch kubectl get canaries --all-namespaces
+```
+
+10.  Describe the Canary Deployment
+```
+kubectl -n flagger-exercise decribe canary/gitops-foundations
+```
+
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
