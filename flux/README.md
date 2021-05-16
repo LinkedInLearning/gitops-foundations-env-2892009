@@ -73,17 +73,6 @@ flux create kustomization gitops-foundations \
 watch flux get kustomizations
 ```
 
-```
-flux create kustomization gitops-foundations \
-  --source=gitops-foundations \
-  --path=./flagger \
-  --prune=true \
-  --validation=client \
-  --interval=1m \
-  --export > ./clusters/cluster1/gitops-foundations-kustomization.yaml
-```
-
-
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
 [lil-course-url]: https://www.linkedin.com/learning/
