@@ -72,9 +72,7 @@ flux create kustomization gitops-foundations \
 ```
 watch flux get kustomizations
 ```
-```
-gitops-foundations.westus2.cloudapp.azure.com
-```
+
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
