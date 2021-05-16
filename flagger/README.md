@@ -12,22 +12,11 @@ In this demonstration we use a canary deployment to progressively deliver a cont
 5.   **Flagger** is a progressive delivery tool that can be used for advanced deployment procedures on Kubernetes clusters.  You can download and install Flagger by following the instructions in the [getting started guide][flagger-start].
 
 ## Instructions
-This folder contains the example files for the Azure Arc demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
+This folder contains the example files for the Flagger demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
 
-Before starting the Flagger exercise, you must have provisioned a new kubernetes cluster on Azure and have bootstrapped Flux in the cluster.  Flux must be configured to sync to the [flagger directory in the environment repository].
+Before starting the Flagger exercise, you must have provisioned a new kubernetes cluster on Azure with Terraform and have bootstrapped Flux in the cluster.  Flux must be configured to sync to the [flagger directory in the environment repository].  `kubectl` should also be configured with the AKS cluster.
 
-You should have the flux configuration repository cloned on your local workstation and Kubectl should be configured with your kubernetes cluster.
-
-Helm Website
-
-Both Flagger and NGINX are installed using helm charts, so we’ll start out by installing helm.  I’ve found the easiest way to install helm is through the scripts provided on the helm website.
-
-From Terminal
-
-I’ve already downloaded the script, so I just need to execute it to install helm. 
-
-./get_helm.sh  
-
+Both Flagger and NGINX are installed using helm charts, so before starting the exercise make sure Helm is installed.
 
 ## Commands
 The following commands are used in the demonstrations.  They are provided within the readme file so that you can copy and paste them while working through the course.
