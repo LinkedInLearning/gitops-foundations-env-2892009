@@ -4,11 +4,11 @@ This directory contains the example materials used in the Flux demonstration tha
 In this demonstration we deploy a containerized application onto an AKS Kubernetes cluster using the Flux operator.
 
 ## Required Tools
-1.  **Terraform** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
+1.  **Terraform** is used to provision the underlying Kubernetes cluster that runs the workloads of the example cloud native application.  You can download and install Terraform for your platform using the [official installation guide][terraform-install].
 2.  **kubectl** is a command line tool used to run commands against the Kubernetes cluster.  You can download and install kubectl by following the installation instructions on the [official site][kube-site].
 3.  **Azure CLI** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
-4.  **Kubectl** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
-5.   **Flux** is a command line interface that is used with Azure Cloud platform.  You can download and install the Azure CLI by following the instructions on the [official website][azurecli-start].
+4.   **Flux** is a continuous deployment tool that uses a GitOps approach to manage operations of workloads on a Kubernetes clusters.  You can download and install Flux by following the instructions in the getting [started guide][flux-start].
+
 
 ## Instructions
 This folder contains the example files for the Azure Arc demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
@@ -85,5 +85,9 @@ gitops-foundations.westus2.cloudapp.azure.com
 [kube-site]: https://kubernetes.io/docs/tasks/tools/
 [azurecli-start]: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 [setup-instructions]: https://github.com/LinkedInLearning/gitops-foundations-env-2892009#installing
+[flux-start]: https://fluxcd.io/docs/get-started/
+[flagger-start]: https://docs.flagger.app/
+[terraform-install]: https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started
+[helm-start]: https://helm.sh/docs/intro/install/
 
 
