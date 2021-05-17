@@ -6,6 +6,8 @@ This is the repository for the LinkedIn Learning course `GitOps Foundations`. Th
 ## Instructions
 This repository contains a folder for each of the tools used within the course.  Inside of each folder, you'll find the files for the example demonstrations pertaining to the tool and more information about the prerequisite technologies.
 
+The course uses the Ubuntu operating system to power the hands-on demonstrations.  If you are using a Windows workstation you can download and install a virtualization tool to run Ubuntu on a VM or alternatively you can use the [Windows Subsystem for Linux][wsl]
+
 ## Installing
 1. To use these exercise files, you must have the following accounts:
 	- **DockerHub** is used to store container images that will be ran throughout the course in specific examples.  Create an account on the [DockerHub][docker-hub] website.
@@ -26,4 +28,5 @@ This repository contains a folder for each of the tools used within the course. 
 [azure-site]: https://azure.microsoft.com/en-us/
 [circle]: https://circleci.com/
 [docker-install]: https://docs.docker.com/engine/install/
+[wsl]: https://docs.microsoft.com/en-us/windows/wsl/about
 
