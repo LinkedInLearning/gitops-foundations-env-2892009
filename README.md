@@ -10,6 +10,7 @@ This repository contains a folder for each of the tools used within the course. 
 
 ## Installing
 1. To follow along with hands-on demonstrations, you must have the following accounts:
+	- **GitHub** is used as the repository manager that hosts the git repositories used throughout the course.  You can sign up for an account on the [GitHub][github] website.
 	- **DockerHub** is used to store container images that will be ran throughout the course in specific examples.  Create an account on the [DockerHub][docker-hub] website.
 	- **Azure** is the cloud platform used to provision elastic infrastructure such as Kubernetes clusters.  You can create a trial account on the [Azure][azure-site] website.
 	- **CircleCi** is the continuous integration platform used in a single lesson in the course.  If you choose to follow along with this lesson, you'll need an account on the platform.  A trial account can be obtained on the [CircleCi][circle] website.
@@ -29,4 +30,5 @@ This repository contains a folder for each of the tools used within the course. 
 [circle]: https://circleci.com/
 [docker-install]: https://docs.docker.com/engine/install/
 [wsl]: https://docs.microsoft.com/en-us/windows/wsl/about
+[github]:https://github.com/
 
