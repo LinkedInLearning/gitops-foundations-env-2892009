@@ -1,2 +1,2 @@
-id="Your service id goes here"
-password="Your service password goes here"
+id="Your Service ID goes here"
+password="Your Service Password goes here"
