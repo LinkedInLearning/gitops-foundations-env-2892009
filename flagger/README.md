@@ -55,7 +55,7 @@ helm upgrade -i flagger flagger/flagger \
 ```
 
 ```
-http://kevinbowersoxteach.westus2.cloudapp.azure.com
+http://{dockerHubUsername}.westus2.cloudapp.azure.com
 ```
 6.  Create the Source Definition
 ```
