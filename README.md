@@ -25,4 +25,5 @@ This repository contains a folder for each of the tools used within the course. 
 [docker-hub]: https://hub.docker.com/
 [azure-site]: https://azure.microsoft.com/en-us/
 [circle]: https://circleci.com/
+[docker-install]: https://docs.docker.com/engine/install/
 
