@@ -1,5 +1,5 @@
 # Argo CD Demonstration
-This directory contains the example materials used in the ArgoCd demonstration that is part of the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
+This directory contains the example materials used in the Argo CD demonstration that is part of the LinkedIn Learning course `GitOps Foundations`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 In this demonstration we deploy a containerized application onto Argo CD using a GitOps approach.
 
