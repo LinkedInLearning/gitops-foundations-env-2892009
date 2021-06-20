@@ -7,7 +7,7 @@ In this demonstration we deploy a containerized application onto Argo CD using a
 1.  **Docker** is used as the underlying container platform for building and running containers.  You can download and install Docker for your platform using the [official installation guide][docker-install].
 2.  **k3d** is used to manage and establish the underlying k3s kubernetes cluster that runs Argo CD.  You can download and install k3d using their [getting started guide][k3d-start].
 3.  **kubectl** is a command line tool used to run commands against the Kubernetes cluster.  You can download and install kubectl by following the installation instructions on the [official site][kube-site].
-4.  **Argo Cd** is the GitOps operator that runs in the cluster and applies the example manifests.  You can download and install Argo CD by following the tools [getting started guide][argo-start].
+4.  **Argo CD** is the GitOps operator that runs in the cluster and applies the example manifests.  You can download and install Argo CD by following the tools [getting started guide][argo-start].
 
 ## Instructions
 This folder contains the example files for the Argo CD demonstration.  Prior to applying these manifests on the Kubernetes cluster with GitOps you will must build and store the container images into DockerHub using these [instructions][setup-instructions].  After completing those instructions, follow along with the steps in the course to deploy the resources to the cluster.
