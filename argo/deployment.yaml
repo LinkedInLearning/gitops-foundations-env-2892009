@@ -6,7 +6,7 @@ metadata:
   labels:
     app: gitops-foundations
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: gitops-foundations
