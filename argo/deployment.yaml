@@ -16,8 +16,8 @@ spec:
         app: gitops-foundations
     spec:
       containers:
-      - name: gitops-foundations
-        image: {dockerHubUsername}/gitops-foundations:1.0
+      - name: /gitops-foundations
+        image: mikeccintel/gitops-foundations:1.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
