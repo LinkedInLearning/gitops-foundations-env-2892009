@@ -45,4 +45,4 @@ spec:
         url: http://flagger-loadtester.flagger-exercise/
         timeout: 5s
         metadata:
-          cmd: "hey -z 1m -q 10 -c 2 http://{dockerHubUsername}.westus2.cloudapp.azure.com/"
+          cmd: "hey -z 1m -q 10 -c 2 http://kwreid.westus2.cloudapp.azure.com/"

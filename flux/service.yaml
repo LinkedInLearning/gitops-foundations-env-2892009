@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: gitops-foundations
   annotations:
-    service.beta.kubernetes.io/azure-dns-label-name: {dockerHubUsername}
+    service.beta.kubernetes.io/azure-dns-label-name: kwreid
   namespace: flux-exercise
 spec:
   type: LoadBalancer
